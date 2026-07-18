@@ -1,0 +1,18 @@
+需要修改IP的文件
+需要修改 2个文件 中的IP地址：
+1. utils/request.js (第9行) 已选中
+javascript
+export const BASE_URL = 'http://192.168.5.29:8080';
+改为新IP，例如：
+javascript
+export const BASE_URL = 'http://192.168.5.30:8080';
+2. utils/upload.js (第6行) 需要修改
+javascript
+export const BASE_URL = 'http://localhost:8080'
+改为新IP，例如：
+javascript
+3export const BASE_URL = 'http://192.168.5.30:8080'
+ 这两个文件的作用
+文件	作用	影响功能
+request.js	API接口请求	登录、获取数据、识别接口等
+upload.js	文件上传	头像上传、图片上传等
